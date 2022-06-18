@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Search Recipes</title>
+</head>
+
+<body>
+    <header class="nav">
+        <div class="nav-logo">
+            <img src="/img/logo-removebg-preview.png" alt="logo" class="logo_img">
+            <p class="logo_text">Eazy <br> <span class="span_text">Recipes</span> </p>
+        </div>
+        <div class="nav_menu">
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="/index.html" class="nav_a">Home</a></li>
+                <li class="nav_li"><a href="/pages/recipes.html" class="nav_a">Recipes</a></li>
+                <li class="nav_li"><a href="about.html" class="nav_a">About</a></li>
+                <li class="nav_li"><a href="contact.html" class="nav_a">Contact</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <main class="search_page">
+        <div class="info">
+            <p>Search by query, by ingredients, and by nutrients </p>
+        </div>
+        <div class="search_div">
+            <input type="text" class="search_input" id="search_input">
+            <button class="search_btn" id="search" style="width: 100px;">Search</button>
+        </div>
+
+
+        <section class="searched_result" id="searched_result">
+            <div class="result_card">
+                <img src="/img/chicken.jpg" class="recipe_img" alt="food Image">
+                <div class="recipe_info">
+                    <div class="ready-time" style="display: flex; justify-content:space-between; padding: 10px; margin: 15px;">
+                        <h3 class="title" style="color: orangered;">Chicken</h3>
+                        <p>Cooking Time <br> <span style="color: orangered; font-size: 1rem;">20mins</span></p>
+                    </div>
+                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                        fuga!</p>
+                    <div class="steps" style="padding: 10px; margin: 15px; border: 1px solid white;">
+                        <p style="font-size: 1rem; margin-bottom: 15px; text-align:start;">Recipe steps</p>
+                         <ul>
+                             <li>step 1</li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+    </main>
+
+
+
+
+
+    <script src="/script/main.js"></script>
+</body>
+
+</html>
