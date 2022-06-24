@@ -55,11 +55,7 @@ a {
     margin: 0 5px;
     transition: 1s;
 }
-
-/* .nav_li:hover {
-    background-color: rgba(9, 255, 0, 0.792);
-} */
-
+ 
 .nav-logo {
     width: 100%;
     height: 100%;
@@ -151,7 +147,7 @@ a {
 .section_img:hover {
     transform: rotate(20deg);
     cursor: pointer;
-    background: rgba(9, 255, 0, 0.523);
+    background:  orangered;
     padding: 5px;
 }
 
@@ -331,6 +327,7 @@ a {
 .series_img{
     margin: 10px 10px 0 10px;
     border-radius: 10px;
+    height: 200px;
 }
 .fall_section{
     position: relative;
@@ -433,16 +430,13 @@ a {
 }
 .categ_header{
   font-size: 1.5rem;
-  /* color: black; */
-  /* padding: 10px; */
   font-weight: bold;
 }
 .categ{
     padding: 30px;
 }
 .categ_list{
-    padding: 10px;
-    /* list-style: none; */
+    padding: 10px; 
     font-size: 1rem;
 }
 list_item{
@@ -515,7 +509,20 @@ i{
     height: 300px;
     margin-bottom: 10px; 
 }
-
+@media screen and (max-width: 780px){
+   .section_items{
+    grid-template-columns: repeat(1, 100%);
+   } 
+   .recipe_cards{
+    grid-template-columns: repeat(1, 100%);
+   }
+   .searched_result{
+    grid-template-columns: repeat(1, 100%);
+   }
+   .main_footer{
+    flex-direction: column;
+   }
+}
 
 
 

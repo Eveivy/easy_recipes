@@ -45,16 +45,34 @@ function erase() {
 }
 setTimeout(type, newTextDelay)
 
-function recipeCards(){
-   let recipeCards = document.querySelector("#recipe_cards")
+function popular() {
+    let popularCon = document.querySelector("#popularCon")
+    fetch("https://api.spoonacular.com/recipes/random?number=5&tags=desserts&apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        }).then(data => {
+            data.recipes.map(el => {
+                let popularRes = `<div class="section_item">
+                       <img src="${el.image}" alt="recipe" class="section_img">
+                       <span class="span_text2">${el.title}</span>
+                   </div>`
+                popularCon.innerHTML += popularRes
+            });
+        }).catch((err) => {
+            console.log(err)
+        });
+}
+popular()
+function recipeCards() {
+    let recipeCards = document.querySelector("#recipe_cards")
     fetch("https://api.spoonacular.com/recipes/random?number=6&tags=vegetarian,salad&apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
-           .then((response) => {
-                    console.log(response);
-                    return response.json();
-            }).then(data => {
-                    // console.log(data);
-                    data.recipes.map(el => { 
-                        let card = `<div class="card">
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        }).then(data => { 
+            data.recipes.map(el => {
+                let card = `<div class="card">
                         <img src="${el.image}" class="card_img" alt="food Image">
                         <div class="card_content">
                             <h3 class="card_title">${el.title}</h3>
@@ -63,36 +81,36 @@ function recipeCards(){
                             <button class="view_btn">view</button>
                         </div>
                        </div>`
-                       recipeCards.innerHTML += card
-                    });
-             }).catch((err) => {
-                    console.log(err)
-                });
+                recipeCards.innerHTML += card
+            });
+        }).catch((err) => {
+            console.log(err)
+        });
 }
 recipeCards()
 
-function popular(){
-    let popularCon = document.querySelector("#popularCon")
-    fetch("https://api.spoonacular.com/recipes/random?number=5&tags=desserts&apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
-           .then((response) => {
-                    console.log(response);
-                    return response.json();
-            }).then(data => {
-                    data.recipes.map(el => { 
-                       let popularRes = `<div class="section_item">
-                       <img src="${el.image}" alt="recipe" class="section_img">
-                       <span class="span_text2">${el.title}</span>
-                   </div>` 
-                       popularCon.innerHTML += popularRes
-                    });
-            }).catch((err) => {
-                    console.log(err)
-    });
+function recipeRow() { 
+    let  recipeSerie = document.querySelector("#series")
+    fetch("https://api.spoonacular.com/recipes/random?number=30&tags=appetizer&apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        }).then(data => { 
+            console.log(data)
+            data.recipes.map(el => {
+                let  row = `<img src="${el.image}" alt="" class="series_img">`
+                recipeSerie.innerHTML += row
+            });
+        }).catch((err) => {
+            console.log(err)
+        });
 }
-popular()
+recipeRow() 
+
+
 // let inputEl = document.getElementById("search_input").value
 // let searchBtn = document.getElementById("search")
- 
+
 //     searchBtn.addEventListener("click", function () {
 //         fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${inputEl}&apiKey=f16dbd3c91bc408686a0de6f9e2457fa`).then((response) => {
 //             console.log(response);
@@ -108,6 +126,3 @@ popular()
 
 //         console.log(inputEl)
 //     })
-
- 
-
