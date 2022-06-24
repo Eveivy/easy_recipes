@@ -136,7 +136,13 @@ a {
     align-items: center;
     padding: 30px;
 }
-
+.section_item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+}
 .section_img {
     width: 200px;
     height: 200px;
@@ -166,47 +172,11 @@ a {
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
-    width: 100px;
-    margin-right: -70px;
     padding: 10px;
+    margin: 20px;
 }
 
-.carousel {
-    position: relative;
-    /* background-color: black; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-.carousel_item {
-    height: 450px;
-    padding: 1rem;
-    display: none;
-}
-.carousel_nav{
-  width: 100%;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  left: 0;  
-}
-.carousel_btn{
- width: 10px;
- height: 10px;
- display: inline-block;
- background: rgba(9, 255, 0, 0.792);
- border-radius: 50%;
- margin: 0 5px; 
- cursor: pointer;  
-}
-.active{
- background: white;
-}
-.active_item{
-    display: block;
-} 
+ 
 .recipe_cards{
     display: grid;
     grid-template-columns: repeat(3, 32%);
@@ -328,6 +298,7 @@ a {
     margin: 10px 10px 0 10px;
     border-radius: 10px;
     height: 200px;
+    cursor: pointer;
 }
 .fall_section{
     position: relative;
@@ -449,9 +420,27 @@ list_item{
     justify-content: center;
     padding: 20px;
 } 
-i{
-    font-size: 1.5rem;
+.search-box{
+    background-color: rgba(0, 0, 0, 0.878); 
+    border-radius: 10px;
+}
+input {
+    padding: 0 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.027), 0 6px 10px 0 rgba(0, 0, 0, 0.035);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.contact-icon{
+    font-size: 2rem;
     margin: 20px;
+}
+i{
+    font-size: 1rem;
     color: orangered;
 }
 .search_page{
@@ -515,12 +504,19 @@ i{
    } 
    .recipe_cards{
     grid-template-columns: repeat(1, 100%);
+    padding: 30px;
+   }
+   .card{
+    width: 100%;
    }
    .searched_result{
     grid-template-columns: repeat(1, 100%);
    }
    .main_footer{
+    border-top: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
    }
 }
 
