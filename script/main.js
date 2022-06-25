@@ -109,8 +109,7 @@ recipeRow()
 
 const searchBox = document.getElementById("search-box")
 searchBox.addEventListener('click', function(){
-    console.log("Clocked")
-    window.location.href = "pages/recipes.html"
+    window.location.href = "pages/search.html"
 })
 
 // let inputEl = document.getElementById("search_input").value

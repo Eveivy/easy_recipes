@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="./img/logo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Search</title>
+</head>
+
+<body>
+    <header class="nav">
+        <div class="nav-logo">
+            <img src="../img/logo-removebg-preview.png" alt="logo" class="logo_img">
+            <p class="logo_text">Easy <br> <span class="span_text">Recipes</span> </p>
+        </div>
+        <div class="nav_menu">
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="../index.html" class="nav_a">Home</a></li>
+                <li class="nav_li"><a href="../pages/recipes.html" class="nav_a">Recipes</a></li>
+                <li class="nav_li"><a href="about.html" class="nav_a">About</a></li>
+            </ul>
+        </div>
+        <div class="search-box margin-top padding">
+            <div>
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="type here..." class="search-input" id="search-input">
+                <button class="btn-orangered search_btn">Search</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <section class="res_cat">
+            <div class="recipe_cards" id="recipe_cards">
+                <div class="card">
+                    <img src="../img/chicken.jpg" class="card_img" alt="food Image">
+                    <div class="card_content">
+                        <h3 class="card_title">${el.title}</h3>
+                    </div>
+                    <div class="btn_div">
+                        <button class="view_btn">view</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="main_footer">
+            <div class="categ">
+                <h4 class="categ_header">Recipe Categories</h4>
+                <ul class="categ_list">
+                    <li class="list_item">Vegetarian</li>
+                    <li class="list_item">Beverages</li>
+                    <li class="list_item">Lunch</li>
+                    <li class="list_item">Breakfast</li>
+                    <li class="list_item">Main Dishes</li>
+                    <li class="list_item">Side Dishes</li>
+                    <li class="list_item">Appetizer</li>
+                </ul>
+            </div>
+            <div class="categ">
+                <h4 class="categ_header">Recipe Categories</h4>
+                <ul class="categ_list">
+                    <li class="list_item">Vegetarian</li>
+                    <li class="list_item">Beverages</li>
+                    <li class="list_item">Lunch</li>
+                    <li class="list_item">Breakfast</li>
+                    <li class="list_item">Main Dishes</li>
+                    <li class="list_item">Side Dishes</li>
+                    <li class="list_item">Appetizer</li>
+                </ul>
+            </div>
+            <div class="categ">
+                <h4 class="categ_header">Recipe Categories</h4>
+                <ul class="categ_list">
+                    <li class="list_item">Vegetarian</li>
+                    <li class="list_item">Beverages</li>
+                    <li class="list_item">Lunch</li>
+                    <li class="list_item">Breakfast</li>
+                    <li class="list_item">Main Dishes</li>
+                    <li class="list_item">Side Dishes</li>
+                    <li class="list_item">Appetizer</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="contact">
+            <i class="bi bi-facebook contact-icon"></i>
+            <i class="bi bi-instagram contact-icon"></i>
+            <i class="bi bi-twitter contact-icon"></i>
+        </div>
+    </footer>
+    <script src="../script/main.js"></script>
+</body>
+
+</html>

@@ -426,7 +426,6 @@ list_item{
 }
 input {
     padding: 0 5px;
-    font-weight: 700;
     font-size: 1rem;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.027), 0 6px 10px 0 rgba(0, 0, 0, 0.035);
@@ -440,10 +439,31 @@ input {
     margin: 20px;
 }
 i{
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: orangered;
+    margin-right: 10px;
 }
-.search_page{
+
+.padding{
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+    margin: 20px;
+}
+.btn-orangered{
+    margin: 0 15px;
+}
+.search-box div{
+    display: flex;
+    align-items: center;
+}
+.search-input{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    cursor: auto;
+}
+/* .search_page{
     background: radial-gradient(#333, #000);
     width: 100%;
     height: 100vh;
@@ -497,7 +517,7 @@ i{
     padding: 30px;
     height: 300px;
     margin-bottom: 10px; 
-}
+} */
 @media screen and (max-width: 780px){
    .section_items{
     grid-template-columns: repeat(1, 100%);
