@@ -28,7 +28,7 @@
             <div>
                 <i class="bi bi-search"></i>
                 <input type="text" placeholder="type here..." class="search-input" id="search-input">
-                <button class="btn-orangered search_btn">Search</button>
+                <button class="btn-orangered search_btn" id="search" onclick="searchRecipe()">Search</button>
             </div>
 
         </div>
@@ -36,17 +36,7 @@
 
     <main class="container-fluid">
         <section class="res_cat">
-            <div class="recipe_cards" id="recipe_cards">
-                <div class="card">
-                    <img src="../img/chicken.jpg" class="card_img" alt="food Image">
-                    <div class="card_content">
-                        <h3 class="card_title">${el.title}</h3>
-                    </div>
-                    <div class="btn_div">
-                        <button class="view_btn">view</button>
-                    </div>
-                </div>
-            </div>
+            <div class="recipe_cards" id="result-container"></div>
         </section>
     </main>
 

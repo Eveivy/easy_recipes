@@ -452,6 +452,7 @@ i{
 }
 .btn-orangered{
     margin: 0 15px;
+    cursor: pointer;
 }
 .search-box div{
     display: flex;

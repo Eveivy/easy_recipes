@@ -70,7 +70,7 @@ function recipeCards() {
         .then((response) => {
             console.log(response);
             return response.json();
-        }).then(data => { 
+        }).then(data => {
             data.recipes.map(el => {
                 let card = `<div class="card">
                         <img src="${el.image}" class="card_img" alt="food Image">
@@ -89,44 +89,56 @@ function recipeCards() {
 }
 recipeCards()
 
-function recipeRow() { 
-    let  recipeSerie = document.querySelector("#series")
+function recipeRow() {
+    let recipeSerie = document.querySelector("#series")
     fetch("https://api.spoonacular.com/recipes/random?number=30&tags=appetizer&apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
         .then((response) => {
             console.log(response);
             return response.json();
-        }).then(data => { 
+        }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let  row = `<img src="${el.image}" alt="" class="series_img">`
+                let row = `<img src="${el.image}" alt="" class="series_img">`
                 recipeSerie.innerHTML += row
             });
         }).catch((err) => {
             console.log(err)
         });
 }
-recipeRow() 
+recipeRow()
 
 const searchBox = document.getElementById("search-box")
-searchBox.addEventListener('click', function(){
+searchBox.addEventListener('click', function () {
     window.location.href = "pages/search.html"
 })
 
-// let inputEl = document.getElementById("search_input").value
-// let searchBtn = document.getElementById("search")
+ function searchRecipe() {
+    console.log("search")
+    let inputEl = document.getElementById("search-input")
+    let inputVal = inputEl.value
+    let resultContainer = document.getElementById("result-container")
 
-//     searchBtn.addEventListener("click", function () {
-//         fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${inputEl}&apiKey=f16dbd3c91bc408686a0de6f9e2457fa`).then((response) => {
-//             console.log(response);
-//             return response.json();
-//         }).then(data => {
-//             console.log(data);
-//             data.results.map(el => {
-//                 console.log(el)
-//             });
-//         }).catch((err) => {
-//             console.log(err)
-//         });
+    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${inputVal}&apiKey=f16dbd3c91bc408686a0de6f9e2457fa`).then((response) => {
+        console.log(response);
+        return response.json();
+    }).then(data => {
+        console.log(data);
+        data.results.map(el => {
+            console.log(el)
+            let card = `<div class="card">
+                        <img src="${el.image}" class="card_img" alt="food Image">
+                        <div class="card_content">
+                            <h3 class="card_title">${el.title}</h3>
+                        </div>
+                        <div class="btn_div">
+                            <button class="view_btn">view</button>
+                        </div>
+                       </div>`
 
-//         console.log(inputEl)
-//     })
+            resultContainer.innerHTML += card
+        });
+    }).catch((err) => {
+        console.log(err)
+    });
+
+}
