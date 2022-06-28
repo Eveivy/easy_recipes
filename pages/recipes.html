@@ -5,63 +5,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Search Recipes</title>
+    <title>Recipes</title>
 </head>
 
 <body>
     <header class="nav">
         <div class="nav-logo">
-            <img src="/img/logo-removebg-preview.png" alt="logo" class="logo_img">
-            <p class="logo_text">Eazy <br> <span class="span_text">Recipes</span> </p>
+            <img src="../img/logo-removebg-preview.png" alt="logo" class="logo_img">
+            <p class="logo_text">Easy <br> <span class="span_text">Recipes</span> </p>
         </div>
         <div class="nav_menu">
             <ul class="nav_ul">
-                <li class="nav_li"><a href="/index.html" class="nav_a">Home</a></li>
-                <li class="nav_li"><a href="/pages/recipes.html" class="nav_a">Recipes</a></li>
+                <li class="nav_li"><a href="../index.html" class="nav_a">Home</a></li>
+                <li class="nav_li"><a href="../pages/recipes.html" class="nav_a">Recipes</a></li>
                 <li class="nav_li"><a href="about.html" class="nav_a">About</a></li>
-                <li class="nav_li"><a href="contact.html" class="nav_a">Contact</a></li>
+                <li class="nav_li search-box" onclick="direct()">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="search" disabled>
+                </li>
             </ul>
         </div>
-
     </header>
-    <main class="search_page">
-        <div class="info">
-            <p>Search by query, by ingredients, and by nutrients </p>
-        </div>
-        <div class="search_div">
-            <input type="text" class="search_input" id="search_input">
-            <button class="search_btn" id="search" style="width: 100px;">Search</button>
-        </div>
-
-
-        <section class="searched_result" id="searched_result">
-            <div class="result_card">
-                <img src="/img/chicken.jpg" class="recipe_img" alt="food Image">
-                <div class="recipe_info">
-                    <div class="ready-time" style="display: flex; justify-content:space-between; padding: 10px; margin: 15px;">
-                        <h3 class="title" style="color: orangered;">Chicken</h3>
-                        <p>Cooking Time <br> <span style="color: orangered; font-size: 1rem;">20mins</span></p>
-                    </div>
-                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis,
-                        fuga!</p>
-                    <div class="steps" style="padding: 10px; margin: 15px; border: 1px solid white;">
-                        <p style="font-size: 1rem; margin-bottom: 15px; text-align:start;">Recipe steps</p>
-                         <ul>
-                             <li>step 1</li>
-                         </ul>
-                    </div>
-                </div>
-            </div>
-           
+    <main class="recipe_page"> 
+        <section class="main-course">
+            <h2 class="meal-type">* Main course</h2>
+            <div class="main-div recipe_cards" id="main-course"</div>
         </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Soup</h2>
+            <div class="main-div recipe_cards" id="soup-section"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Beverages</h2>
+            <div class="main-div recipe_cards" id="beverage"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Dessert</h2>
+            <div class="main-div recipe_cards" id="dessert"></div>
+        </section> 
+
+        <section class="main-course">
+            <h2 class="meal-type">* Appetizer</h2>
+            <div class="main-div recipe_cards" id="appetizer"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Salad</h2>
+            <div class="main-div recipe_cards" id="salad"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Side Dish</h2>
+            <div class="main-div recipe_cards" id="side-dish"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Breakfast</h2>
+            <div class="main-div recipe_cards" id="break-fast"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Sauce</h2>
+            <div class="main-div recipe_cards" id="sauce"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Bread</h2>
+            <div class="main-div recipe_cards" id="bread"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* fingerfood</h2>
+            <div class="main-div recipe_cards" id="finger-food"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* snack</h2>
+            <div class="main-div recipe_cards" id="snack"></div>
+        </section>
+
+        <section class="main-course">
+            <h2 class="meal-type">* Drink</h2>
+            <div class="main-div recipe_cards" id="drink"></div>
+        </section>
+
     </main>
 
 
 
+    <footer class="footer">
+        <div class="main_footer">
+            <div class="categ">
+                <h4 class="categ_header">Meal Types</h4>
+                <ul class="categ_list">
+                    <li class="list_item">Vegetarian</li>
+                    <li class="list_item">Beverages</li>
+                    <li class="list_item">Lunch</li>
+                    <li class="list_item">Breakfast</li>
+                    <li class="list_item">Main Dishes</li>
+                    <li class="list_item">Side Dishes</li>
+                    <li class="list_item">Appetizer</li>
+                </ul>
+            </div>
+            <div class="categ">
+                <h4 class="categ_header">Cuisines</h4>
+                <ul class="categ_list">
+                    <li class="list_item">Vegetarian</li>
+                    <li class="list_item">Beverages</li>
+                    <li class="list_item">Lunch</li>
+                    <li class="list_item">Breakfast</li>
+                    <li class="list_item">Main Dishes</li>
+                    <li class="list_item">Side Dishes</li>
+                    <li class="list_item">Appetizer</li>
+                </ul>
+            </div>
+            <div class="categ">
+                <h4 class="categ_header">Intolerances</h4>
+                <ul class="categ_list">
+                    <li class="list_item">Vegetarian</li>
+                    <li class="list_item">Beverages</li>
+                    <li class="list_item">Lunch</li>
+                    <li class="list_item">Breakfast</li>
+                    <li class="list_item">Main Dishes</li>
+                    <li class="list_item">Side Dishes</li>
+                    <li class="list_item">Appetizer</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="contact">
+            <i class="bi bi-facebook contact-icon"></i>
+            <i class="bi bi-instagram contact-icon"></i>
+            <i class="bi bi-twitter contact-icon"></i>
+        </div>
+    </footer>
 
 
-    <script src="/script/main.js"></script>
+    
+    <script src="/script/meal-type.js"></script>
 </body>
 
 </html>

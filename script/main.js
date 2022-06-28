@@ -118,7 +118,7 @@ searchBox.addEventListener('click', function () {
     let inputVal = inputEl.value
     let resultContainer = document.getElementById("result-container")
 
-    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${inputVal}&apiKey=f16dbd3c91bc408686a0de6f9e2457fa`).then((response) => {
+    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${inputVal}&number=100&apiKey=f16dbd3c91bc408686a0de6f9e2457fa`).then((response) => {
         console.log(response);
         return response.json();
     }).then(data => {
@@ -139,6 +139,8 @@ searchBox.addEventListener('click', function () {
         });
     }).catch((err) => {
         console.log(err)
+        resultContainer.innerHTML = `<h1>No result found for "${inputVal}"</h1>
+        <p>${err}</p>`
     });
 
 }
