@@ -400,12 +400,11 @@ a {
 .footer{
     width: 100%;
     background: radial-gradient(#333, #000);
-    padding: 30px;
     color: #fff;
 }
 .main_footer{
     display: flex;
-    justify-content: space-between;
+    justify-content:  center;
     width: 100%;
     border-bottom: #ccc solid 1px;
     border-top: #ccc solid 1px;
@@ -416,14 +415,15 @@ a {
 }
 .categ{
     padding: 30px;
+    margin: 0 40px;
 }
 .categ_list{
     padding: 10px; 
     font-size: 1rem;
 }
-list_item{
+.list_item{
     color: #fff;
-    margin: 10px;
+    margin: 10px 0;
 }
 .contact{
     display: flex;
