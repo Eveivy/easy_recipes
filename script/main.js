@@ -139,8 +139,7 @@ searchBox.addEventListener('click', function () {
         });
     }).catch((err) => {
         console.log(err)
-        resultContainer.innerHTML = `<h1>No result found for "${inputVal}"</h1>
-        <p>${err}</p>`
+        resultContainer.innerHTML = `<h1 style="color: red;"> An error occurred while searching for "${inputVal}"</h1>`
     });
 
 }
