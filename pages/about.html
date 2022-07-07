@@ -9,27 +9,47 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="shortcut icon" href="../img/istockphoto-1185879263-170667a-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <title>Search</title>
+    <title>About</title>
 </head>
 
 <body>
-
     <header class="nav">
         <div class="nav-logo">
             <p class="logo_text">Easy<span class="span_text">/Recipes</span> </p>
         </div>
-        <div class="nav_menu">
-            <ul class="nav_ul">
-                <li class="nav_li"><a href="../index.html" class="nav_a">Home</a></li>
-                <li class="nav_li"><a href="/pages/recipes.html" class="nav_a">Recipes</a></li>
-                <li class="nav_li"><a href="/pages/about.html" class="nav_a">About</a></li>
-            </ul>
+        <div class="my-menu">
+            <div class="nav_menu">
+                <ul class="nav_ul">
+                    <li class="nav_li"><a href="../index.html" class="nav_a">Home</a></li>
+                    <li class="nav_li"><a href="../pages/recipes.html" class="nav_a">Recipes</a></li>
+                    <li class="nav_li"><a href="../pages/about.html" class="nav_a">About</a></li>
+                </ul>
+            </div>
+            <div class="nav_li search-box" onclick="direct()">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="search" disabled>
+            </div>
         </div>
-        <div class="nav_li search-box" onclick="direct()" >
-            <i class="bi bi-search"></i>
-            <input type="text" placeholder="search" disabled>
-        </div>
+        <button class="menu-bar" id="menu-toggle"><i class="bi bi-menu-button-wide"></i></button>
     </header>
+    <div class="mobile-container toggle" id="toggle-mobile">
+        <div class="my-menu" style="display: block; padding: 50px;">
+            <div class="nav_menu">
+                <ul class="nav_ul" style="flex-direction: column;">
+                    <li class="nav_li"><a href="../index.html" class="nav_a">Home</a></li>
+                    <li class="nav_li"><a href="../pages/recipes.html" class="nav_a">Recipes</a></li>
+                    <li class="nav_li"><a href="../pages/about.html" class="nav_a">About</a></li>
+                </ul>
+            </div>
+            <div class="" style="display: flex; justify-content:center; padding: 50px 0;">
+                <div class="nav_li search-box" onclick="direct()">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="search" disabled>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <main class="container-fluid">
 
@@ -85,6 +105,7 @@
     </footer>
 
     <script src="../script/meal-type.js"></script>
+    <script src="../script/main.js"></script>
 </body>
 
 </html>

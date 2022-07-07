@@ -12,31 +12,59 @@
     <title>Search</title>
 </head>
 
-<body>
-    <header class="nav" style="padding: 0;">
-        <div class="nav-logo">
-            <p class="logo_text">Easy<span class="span_text">/Recipes</span> </p>
-        </div>
+<body> 
+<header class="nav">
+    <div class="nav-logo">
+        <p class="logo_text">Easy<span class="span_text">/Recipes</span> </p>
+    </div>
+    <div class="my-menu">
         <div class="nav_menu">
-            <ul class="nav_ul">
+            <ul class="nav_ul" style="margin-top: 50px;">
                 <li class="nav_li"><a href="../index.html" class="nav_a">Home</a></li>
                 <li class="nav_li"><a href="../pages/recipes.html" class="nav_a">Recipes</a></li>
-                <li class="nav_li"><a href="about.html" class="nav_a">About</a></li>
+                <li class="nav_li"><a href="../pages/about.html" class="nav_a">About</a></li>
             </ul>
         </div>
-        <div class="search-box margin-top padding">
+        <div class="search-box padding">
             <div>
                 <i class="bi bi-search"></i>
                 <input type="text" placeholder="type here..." class="search-input" id="search-input">
                 <button class="btn-orangered search_btn" id="search" onclick="searchRecipe()">Search</button>
             </div>
-
+        
         </div>
-    </header>
+    </div>
+    <button class="menu-bar" id="menu-toggle"><i class="bi bi-menu-button-wide"></i></button>
+</header>
+<div class="mobile-container toggle" id="toggle-mobile">
+    <div class="my-menu" style="display: block; padding: 50px;">
+        <div class="nav_menu">
+            <ul class="nav_ul" style="flex-direction: column;">
+                <li class="nav_li"><a href="../index.html" class="nav_a">Home</a></li>
+                <li class="nav_li"><a href="../pages/recipes.html" class="nav_a">Recipes</a></li>
+                <li class="nav_li"><a href="../pages/about.html" class="nav_a">About</a></li>
+            </ul>
+        </div>
+        <div class="" style="display: flex; justify-content:center; padding: 50px 0;">
+            <div class="nav_li search-box" onclick="direct()">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="search" disabled>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
-    <main class="container-fluid">
-
+    <main class="container-fluid" style="background: radial-gradient(#333, #000); padding: 15px 0;">
+        <div class="search-box padding type-div">
+            <div>
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="type here..." class="search-input" id="search-input">
+                <button class="btn-orangered search_btn" id="search" onclick="searchRecipe()">Search</button>
+            </div>
+        
+        </div>
         <section class="res_cat">
             <div class="recipe_cards" id="result-container"></div>
         </section>
@@ -90,6 +118,7 @@
         </div>
     </footer>
     <script src="../script/main.js"></script>
+    <script src="../script/meal-type.js"></script>
 </body>
 
 </html>

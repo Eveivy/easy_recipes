@@ -45,6 +45,31 @@ function erase() {
 }
 setTimeout(type, newTextDelay)
 
+let toggleBtn = document.getElementById("menu-toggle")
+toggleBtn.addEventListener('click', ()=>{
+    console.log("Navbar on mobile")
+    let mobileCon = document.getElementById("toggle-mobile")
+    if (mobileCon.style.display === "block") {
+        mobileCon.style.display = "none";
+    } else {
+        mobileCon.style.display = "block";
+    }
+})
+function redirect() {
+    window.location.href = "pages/search.html"
+}; 
+function foodJoke() {
+    fetch("https://api.spoonacular.com/food/trivia/random?apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        }).then(data => {
+           console.log(data)
+        }).catch((err) => {
+            console.log(err)
+        });
+}
+foodJoke()
 function popular() {
     let popularCon = document.querySelector("#popularCon")
     fetch("https://api.spoonacular.com/recipes/random?number=5&tags=desserts&apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
@@ -107,11 +132,6 @@ function recipeRow() {
 }
 recipeRow()
 
-const searchBox = document.getElementById("search-box")
-searchBox.addEventListener('click', function () {
-    window.location.href = "pages/search.html"
-})
-
  function searchRecipe() {
     console.log("search")
     let inputEl = document.getElementById("search-input")
@@ -139,7 +159,7 @@ searchBox.addEventListener('click', function () {
         });
     }).catch((err) => {
         console.log(err)
-        resultContainer.innerHTML = `<h1 style="color: red;"> An error occurred while searching for "${inputVal}"</h1>`
+        resultContainer.innerHTML = `<h1 style="color: red;"> An error occurred while searching for"${inputVal}"</h1>`
     });
 
 }
