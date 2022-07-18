@@ -11,7 +11,7 @@ function  mainCourse() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -31,7 +31,7 @@ function soupFunc(){
             return response.json();
         }).then(data => { 
             data.recipes.map(el => {
-                let card = `<div class="section_item">
+                let card = `<div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -52,7 +52,7 @@ function beverages() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -73,7 +73,7 @@ function desserts() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -94,7 +94,7 @@ function marinade() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -114,7 +114,7 @@ function salad() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -135,7 +135,7 @@ function sideDish() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -156,7 +156,7 @@ function  breakFast() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -177,7 +177,7 @@ function  saucy() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -198,7 +198,7 @@ function bread() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -219,7 +219,7 @@ function fingerFood() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -240,7 +240,7 @@ function snacky() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -261,7 +261,7 @@ function drinks() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let card = ` <div class="section_item">
+                let card = ` <div class="section_item" onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`

@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/istockphoto-1185879263-170667a-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Recipes</title>
 </head>
 
-<body> 
+<body>
     <header class="nav">
         <div class="nav-logo">
             <p class="logo_text">Easy<span class="span_text">/Recipes</span> </p>
@@ -47,7 +48,7 @@
                     <input type="text" placeholder="search" disabled>
                 </div>
             </div>
-    
+
         </div>
     </div>
     <main class="recipe_page">
@@ -118,7 +119,23 @@
 
     </main>
 
-
+    <div class="modal" id="recipeModal">
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2>Recipe</h2>
+                <i class="bi bi-x-octagon-fill" onclick="closeModal()"></i>
+            </div>
+            <div class="modal_body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nemo obcaecati facere atque
+                    accusamus magnam!
+                </p>
+            </div>
+            <div class="modal_footer">
+                <button id="save_recipe" class="search_btn">Save</button>
+                <button id="close_modal" class="search_btn" onclick="closeModal()">Got it!</button>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="main_footer">
@@ -169,7 +186,7 @@
     </footer>
 
 
-
+    <script src="../script/modal.js"></script>
     <script src="/script/meal-type.js"></script>
     <script src="/script/main.js"></script>
 </body>

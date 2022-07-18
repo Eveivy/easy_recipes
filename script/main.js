@@ -46,8 +46,7 @@ function erase() {
 setTimeout(type, newTextDelay)
 
 let toggleBtn = document.getElementById("menu-toggle")
-toggleBtn.addEventListener('click', ()=>{
-    console.log("Navbar on mobile")
+toggleBtn.addEventListener('click', () => {
     let mobileCon = document.getElementById("toggle-mobile")
     if (mobileCon.style.display === "block") {
         mobileCon.style.display = "none";
@@ -57,19 +56,8 @@ toggleBtn.addEventListener('click', ()=>{
 })
 function redirect() {
     window.location.href = "pages/search.html"
-}; 
-function foodJoke() {
-    fetch("https://api.spoonacular.com/food/trivia/random?apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
-        .then((response) => {
-            console.log(response);
-            return response.json();
-        }).then(data => {
-           console.log(data)
-        }).catch((err) => {
-            console.log(err)
-        });
-}
-foodJoke()
+};
+
 function popular() {
     let popularCon = document.querySelector("#popularCon")
     fetch("https://api.spoonacular.com/recipes/random?number=5&tags=desserts&apiKey=f16dbd3c91bc408686a0de6f9e2457fa")
@@ -78,7 +66,7 @@ function popular() {
             return response.json();
         }).then(data => {
             data.recipes.map(el => {
-                let popularRes = `<div class="section_item">
+                let popularRes = `<div class="section_item"  onclick="openModal()">
                        <img src="${el.image}" alt="recipe" class="section_img">
                        <span class="span_text2">${el.title}</span>
                    </div>`
@@ -103,7 +91,7 @@ function recipeCards() {
                             <h3 class="card_title">${el.title}</h3>
                         </div>
                         <div class="btn_div">
-                            <button class="view_btn">view</button>
+                            <button class="view_btn" onclick="openModal()">view</button>
                         </div>
                        </div>`
                 recipeCards.innerHTML += card
@@ -123,7 +111,7 @@ function recipeRow() {
         }).then(data => {
             console.log(data)
             data.recipes.map(el => {
-                let row = `<img src="${el.image}" alt="" class="series_img">`
+                let row = `<img src="${el.image}" alt="" class="series_img" onclick="openModal()">`
                 recipeSerie.innerHTML += row
             });
         }).catch((err) => {
@@ -132,7 +120,7 @@ function recipeRow() {
 }
 recipeRow()
 
- function searchRecipe() {
+function searchRecipe() {
     console.log("search")
     let inputEl = document.getElementById("search-input")
     let inputVal = inputEl.value
@@ -151,7 +139,7 @@ recipeRow()
                             <h3 class="card_title">${el.title}</h3>
                         </div>
                         <div class="btn_div">
-                            <button class="view_btn">view</button>
+                            <button class="view_btn" onclick="openModal()">view</button>
                         </div>
                        </div>`
 

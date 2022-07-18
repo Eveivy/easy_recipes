@@ -168,6 +168,7 @@ a {
     font-weight: bold;
     padding: 10px;
     margin: 20px;
+    cursor: pointer;
 } 
 .recipe_cards{
     display: grid;
